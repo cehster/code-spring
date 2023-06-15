@@ -1,2 +1,2 @@
 # code-spring
-React blog
+A blog about programming and related topics. 
