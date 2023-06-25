@@ -9,9 +9,14 @@ const Home = () => {
         {title: 'SQL Server Replication', body: 'lorem ipsum..', author: 'Chris Ehster', id: 3}        
     ]);
 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);  // if the id doesn't match, put it in our new list
+        setBlogs(newBlogs);
+    }
+
     return ( 
         <div className="home">
-            <BlogList blogs={blogs} title="Recent Posts:"/>
+            <BlogList blogs={blogs} title="Recent Posts:" handleDelete={handleDelete}/>
         </div>
      );
 }
